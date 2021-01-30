@@ -6,7 +6,7 @@
 //#include <unistd.h>
 #include "functions.h"
 #define PI 3.14159265358979323846
-using namespace std;
+//using namespace std;
 
 //screen dimensions
 
@@ -144,7 +144,7 @@ public:
 		scale(normal,k);
 		double unit2[3];
 		vector(unit2,unit,normal);
-		if(limit=0)	return balls[index].color;
+		if(limit==0)	return balls[index].color;
 		return (1-balls[index].coeff)*balls[index].color+balls[index].coeff*rayTrace(origin2,unit2,balls,n,altitute,coeff,limit-1);
 	}
 };
